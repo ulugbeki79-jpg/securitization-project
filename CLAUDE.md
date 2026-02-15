@@ -4,16 +4,37 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A structured finance modeling framework for securitization transactions — the practice of pooling contractual debt (mortgages, auto loans, receivables) and selling consolidated cash flows to investors as securities.
+MBS (Mortgage-Backed Securities) modeling framework for the Mortgage Refinancing Company of Uzbekistan. This is a greenfield project building tooling for Uzbekistan's emerging securitization practice, combining local regulatory requirements with international structured finance best practices.
 
-### Planned Modules
+**Currency**: UZS (Uzbek som) — all monetary values, cash flow projections, and financial calculations use UZS unless explicitly stated otherwise.
 
-- **Asset Pool Management** — Defining and managing pools of underlying assets
-- **Tranche Structuring** — Structuring ABS into senior, mezzanine, and equity tranches with different risk/return profiles
-- **Cash Flow Waterfall** — Distributing cash flows across tranches according to priority-of-payment rules
-- **Credit Enhancement** — Overcollateralization, subordination levels, reserve accounts
-- **Risk Analytics** — Scenario analysis, stress testing, default/prepayment modeling
-- **Reporting** — Investor reports, pool performance summaries, compliance documentation
+**Bilingual requirement**: All documentation, reports, UI labels, and user-facing strings must support both Uzbek/Russian and English.
+
+## Domain Context
+
+The securitization pipeline follows this workflow:
+
+1. **Loan Pool Selection** — Screening and selecting mortgage loans from the company's portfolio based on eligibility criteria
+2. **Due Diligence** — Validating loan-level data quality, legal documentation, and borrower information
+3. **SPV Structuring** — Establishing Special Purpose Vehicles to isolate securitized assets from the originator's balance sheet
+4. **Credit Enhancement Analysis** — Sizing overcollateralization, subordination, reserve accounts, and other credit support mechanisms
+5. **Cash Flow Waterfall Modeling** — Defining priority-of-payment rules and distributing projected cash flows across tranches (senior, mezzanine, equity)
+6. **Investor Reporting** — Generating pool performance summaries, compliance documentation, and investor-facing reports
+
+## Regulatory Context
+
+- Uzbekistan's securities regulatory framework is actively evolving; the project must accommodate regulatory changes
+- Compliance logic should be modular and configurable rather than hardcoded
+- International references: follow conventions from established MBS markets (e.g., SIFMA/ISDA standards) where local rules have not yet been defined
+
+## Planned Modules
+
+- **Asset Pool Management** — Mortgage loan pool definition, eligibility screening, pool stratification
+- **Tranche Structuring** — Senior/mezzanine/equity tranching with configurable attachment/detachment points
+- **Cash Flow Waterfall** — Priority-of-payment engine with configurable waterfall rules
+- **Credit Enhancement** — Overcollateralization, subordination, reserve account modeling
+- **Risk Analytics** — Stress testing, default/prepayment modeling (CPR/CDR), scenario analysis
+- **Reporting** — Bilingual investor reports, pool tape generation, regulatory filings
 
 ## Repository Status
 
