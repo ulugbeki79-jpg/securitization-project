@@ -36,6 +36,18 @@ The securitization pipeline follows this workflow:
 - **Risk Analytics** — Stress testing, default/prepayment modeling (CPR/CDR), scenario analysis
 - **Reporting** — Bilingual investor reports, pool tape generation, regulatory filings
 
-## Repository Status
+## Commands
 
-This is a greenfield project in its initial setup phase. No build system, test framework, or source code has been established yet. When adding these, update this file with the relevant build, test, and lint commands.
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Generate sample loan pool (200 loans)
+python sample_data/generate_sample_pool.py
+
+# Run loan pool analysis (outputs report + charts to output/)
+python -m pool_analysis.analyze sample_data/loan_pool.xlsx
+
+# Specify custom output directory
+python -m pool_analysis.analyze path/to/pool.xlsx -o my_output/
+```

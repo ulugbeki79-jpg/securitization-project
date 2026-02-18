@@ -1,0 +1,13 @@
+# Output artifacts
+output/
+
+# Sample data (generated)
+sample_data/loan_pool.xlsx
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
