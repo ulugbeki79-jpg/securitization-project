@@ -1,6 +1,3 @@
-# Output artifacts
-output/
-
 # Sample data (generated)
 sample_data/loan_pool.xlsx
 
