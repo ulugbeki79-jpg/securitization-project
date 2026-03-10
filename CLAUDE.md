@@ -50,4 +50,10 @@ python -m pool_analysis.analyze sample_data/loan_pool.xlsx
 
 # Specify custom output directory
 python -m pool_analysis.analyze path/to/pool.xlsx -o my_output/
+
+# Run MBS cash flow waterfall model (outputs multi-sheet Excel to output/)
+python -m waterfall.model sample_data/loan_pool.xlsx
+
+# Waterfall with custom assumptions
+python -m waterfall.model sample_data/loan_pool.xlsx --cpr 0.10 --cdr 0.03 --senior-pct 0.75
 ```
